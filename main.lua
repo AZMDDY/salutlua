@@ -1,3 +1,6 @@
 require("util/str")
 
-print(Str.Trim("gdg gdgf "))
+s = Str.Trim("  AVD  dfgg fff   ")
+
+print(s)
+print(string.len(s))

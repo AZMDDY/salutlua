@@ -1,11 +1,13 @@
 
+---@class Str*
 Str={}
 
+---
+--- Returns a string without leading and trailing spaces
+---
+---@param s string
+---@return string
 function Str.Trim(s)
-    if type(s)=="string" then
-        s, _ = string.gsub(string.gsub(s,"^%s+", ""), "%s+$", "")
-        return s
-    end
+    s, _ = string.gsub(s,"^%s*(.-)%s*$", "%1")
+    return s
 end
-
-return Str
